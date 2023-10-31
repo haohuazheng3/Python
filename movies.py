@@ -17,7 +17,10 @@ class Movies:
                         }
                     )
                 row_idx += 1
+                
+    def get_all_movie_names(self):
+        return [movie['name'] for movie in self._movies]
 
 
 if __name__ == "__main__":
-    movies = Movies('./movies.txt')
+    movies = Movies('movies.txt')
