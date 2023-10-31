@@ -52,3 +52,4 @@ if __name__ == "__main__":
             search_movie_by_cast()
         else:
             print("\nInvalid option. Please try again.\n")
+            
