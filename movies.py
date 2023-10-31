@@ -17,10 +17,12 @@ class Movies:
                         }
                     )
                 row_idx += 1
-                
+
     def get_all_movie_names(self):
         return [movie['name'] for movie in self._movies]
 
+    def search_movies_by_name(self, word):
+        return [movie['name'] for movie in self._movies if word.lower() in movie['name'].lower()]
 
 if __name__ == "__main__":
     movies = Movies('movies.txt')
