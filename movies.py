@@ -18,6 +18,19 @@ class Movies:
                     )
                 row_idx += 1
 
+    def get_all_movie_names(self):
+        return [movie['name'] for movie in self._movies]
+
+    def search_movies_by_name(self, word):
+        return [movie['name'] for movie in self._movies if word.lower() in movie['name'].lower()]
+    
+    def search_movies_by_cast(self, word):
+        results = []
+        for movie in self._movies:
+            matching_casts = [actor for actor in movie['cast'] if word.lower() in actor.lower()]
+            if matching_casts:
+                results.append({'name': movie['name'], 'cast': matching_casts})
+        return results
 
 if __name__ == "__main__":
-    movies = Movies('./movies.txt')
+    movies = Movies('movies.txt')
