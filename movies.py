@@ -26,3 +26,4 @@ class Movies:
 
 if __name__ == "__main__":
     movies = Movies('movies.txt')
+

@@ -38,3 +38,4 @@ if __name__ == "__main__":
             search_movie_by_name()
         else:
             print("\nInvalid option. Please try again.\n")
+
