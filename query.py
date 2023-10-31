@@ -27,4 +27,3 @@ if __name__ == "__main__":
             list_all_movie_names()
         else:
             print("\nInvalid option. Please try again.\n")
-
